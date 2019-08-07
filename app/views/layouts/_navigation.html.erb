@@ -1,7 +1,5 @@
 
-<a class="active item">
-Chatroom
-</a>
+<%= link_to "Chatroom", root_path, class: "item" %>
 <a class="item">
 Messages
 </a>
@@ -10,13 +8,13 @@ Friends
 </a>
 
 <div class="ui item inline dropdown">
-<input type="hidden" name="gender">
-<i class="dropdown icon"></i>
+    <input type="hidden" name="account">
+    <i class="dropdown icon"></i>
     <div class="default text">Account</div>
         <div class="menu">
-        <div class="item" data-value="male">Logout</div>
-        <div class="item" data-value="female">Login</div>
-        <div class="item" data-value="female">Sign Up</div>
+            <div class="item" data-value="male">Logout</div>
+            <%= link_to "Log In", login_path, class: "item" %>
+            <div class="item" data-value="female">Sign Up</div>
         </div>
     </div>
 
