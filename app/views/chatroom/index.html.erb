@@ -11,43 +11,20 @@
         <div class="ui fluid raised card chatbox">
             <div class="content">
                 <div class="ui large feed">
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <em class="user">
-                                    Elliot Fu
-                                </em>: Test message
-                                <div class="date">
-                                    5 Hours Ago
+                    <% @messages.each do |message| %>
+                        <div class="event">
+                            <div class="content">
+                                <div class="summary">
+                                    <em class="user">
+                                        <%= message.user.username %>
+                                    </em>: <%= message.body %>
+                                    <%# <div class="date">
+                                        <%= message.created_at %>
+                                    <%# </div> %> 
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <em class="user">
-                                    Kevin Kolk
-                                </em>: Test message
-                                <div class="date">
-                                    3 Hours Ago
-                                </div>
-                            </div>           
-                        </div>
-                    </div>
-                    <div class="event">
-                        <div class="content">
-                            <div class="summary">
-                                <em class="user">
-                                    Porty
-                                </em>: Test message
-                                <div class="date">
-                                    1 Hour Ago
-                                </div>
-                            </div>           
-                        </div>
-                    </div>
-        
+                    <% end %>
                 </div>
             </div>
             <div class="extra content">
